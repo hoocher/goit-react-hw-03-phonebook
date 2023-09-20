@@ -2,12 +2,6 @@ import { Component } from 'react';
 import ContactListItem from './ContactListItem';
 
 class ContactList extends Component {
-  componentDidUpdate = prevProps => {
-    if (this.props.contacts !== prevProps.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.props.contacts));
-    }
-  };
-
   render() {
     return (
       <ul>
